@@ -1,0 +1,62 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // color: $pcBandSite-Black;
+    margin: 0;
+}
+
+.form-field-style {
+    min-height: 36px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px;
+    border: 1px solid $scMercury;
+}
+
+.button {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $pcBrainFlix-Blue;
+    color: $pcWhite;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        flex-grow: 2;
+        font-weight: 700;
+    }
+
+    &:hover {
+        background-color: $scBrainFlix-DarkBlue;
+        cursor: pointer;
+    }
+
+    @include tablet {
+        max-width: 150px;
+
+        &--bio {
+            max-width: 150px;
+            padding: 0 32px;
+            align-self: flex-end;
+        }
+    }
+}
+
+// .bottom-border {
+//     border-bottom: 3px solid $pcWhite;
+// }
+
+
+
+
+
+// .footer {
+
+// }

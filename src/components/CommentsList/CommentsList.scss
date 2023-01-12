@@ -1,0 +1,30 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments {
+
+    padding: 0 16px 16px 16px;
+
+    @include tablet {
+        padding: 0;
+    }
+
+    @include desktop {
+        padding: 0 0 0 8rem;
+    }
+
+    &__title {
+        letter-spacing: 1px;
+        padding-left: 0;
+
+        @include tablet {
+            font-weight: 600;
+            padding: 24px 36px;
+        }
+
+        @include desktop {
+            padding: 40px 0 36px 0;
+        }
+    }
+}

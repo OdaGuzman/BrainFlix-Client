@@ -1,0 +1,80 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments {
+    &__singlecomment {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 16px;
+        border-bottom: 1px solid $scMercury;
+        padding-bottom: 16px;
+
+        @include tablet {
+            margin: 0 36px;
+        }
+
+        @include desktop {
+            margin: 0;
+            gap: 3rem;
+            padding: 0 24px 32px 24px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__profile {
+        border-radius: 50%;
+        background-color: $scMercury;
+        height: 36px;
+        width: 36px;
+        flex-shrink: 0;
+        margin: 12px 0;
+
+        @include tablet {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__icon {
+        height: 15px;
+        width: 15px;
+        color: $scMercury;
+        cursor: pointer;
+    }
+
+    &__textwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-grow: 2;
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        font-weight: 600;
+        padding: 16px 0;
+    }
+
+    &__date {
+        color: $pcSilver;
+        padding: 16px 0;
+    }
+
+    &__text {
+        padding: 0;
+    }
+
+
+}

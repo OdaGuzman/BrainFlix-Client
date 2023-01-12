@@ -1,0 +1,24 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+
+.recommended {
+    padding: 0 16px;
+
+    @include tablet {
+        padding: 24px 36px;
+        width: 50%;
+    }
+
+    @include desktop {
+        border-left: 1px solid $scMercury;
+    }
+
+
+    &__title {
+        color: $pcSilver;
+        font-weight: 600;
+        padding: 0;
+    }
+
+}

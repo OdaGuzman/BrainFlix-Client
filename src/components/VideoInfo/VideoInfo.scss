@@ -1,0 +1,117 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+
+.video {
+
+    width: 100%;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 0 36px;
+        }
+
+        @include desktop {
+            padding: 0 0 0 8rem;
+        }
+    }
+
+    &__title {
+        padding: 24px 16px 16px 16px;
+
+        @include tablet {
+            padding-left: 0;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 16px;
+        padding: 16px 0;
+        border-top: 1px solid $scMercury;
+        border-bottom: 1px solid $scMercury;
+
+        @include tablet {
+            margin: 0;
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        @include desktop {
+            padding-right: 16px;
+        }
+    }
+
+    &__text {
+        padding: 0;
+        color: $pcSilver;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 32px;
+        }
+    }
+
+    &__author {
+        color: $pcBrainFlix-Black;
+        font-weight: 600;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 32px
+        }
+    }
+
+    &__views {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            gap: 10px;
+        }
+    }
+
+    &__likes {
+        display: flex;
+        justify-content: space-between;
+
+        &--text {
+            text-align: left;
+        }
+
+        @include tablet {
+            gap: 10px;
+        }
+    }
+
+    &__description {
+        padding: 16px;
+
+        @include tablet {
+            padding: 16px 0;
+        }
+
+        @include desktop {
+            padding: 16px 16px 16px 0;
+        }
+    }
+}

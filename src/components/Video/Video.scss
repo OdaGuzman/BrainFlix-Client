@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+
+.hero {
+
+    &__player {
+        width: 100%;
+
+        @include tablet {
+            padding: 0 36px;
+            background-color: $scBrainFlix-DarkBlack;
+        }
+
+        @include desktop {
+            padding: 0 12rem;
+        }
+    }
+}
